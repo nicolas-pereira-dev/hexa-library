@@ -1,0 +1,29 @@
+<form [formGroup]="formGroup" class="login-form">
+    <h3 class="login-title">Login</h3>
+    <label for="username">Username:</label>
+    <input
+        class="login-input"
+        type="text"
+        id="username"
+        name="username"
+        formControlName="username"
+    >
+    <label for="password">Password:</label>
+    <input
+        class="login-input"
+        type="password"
+        id="password"
+        name="password"
+        formControlName="password"
+    >
+    
+    @if(formGroup.touched && formGroup.invalid){
+        <span class="error-message">{{ errorMessage }}</span>
+    }
+
+    <button type="button" (click)="login()">Login</button>
+    <span class="register-text">
+        Don't have an account? 
+        <a routerLink="/register" class="register-link">Register here</a>
+    </span>
+</form>

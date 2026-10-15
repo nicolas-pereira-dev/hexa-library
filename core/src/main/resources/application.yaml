@@ -1,0 +1,25 @@
+spring:
+  application:
+      name: core
+  datasource:
+    url: jdbc:postgresql://localhost:5432/hexadb
+    username: hexadb
+    password: hexadb
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update # utilise le create pour les générer puis passe à update pour conserver les données
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+minio:
+  endpoint: http://localhost:9000
+  bucket: hexa-bucket
+  access-key: minioadmin
+  secret-key: minioadmin

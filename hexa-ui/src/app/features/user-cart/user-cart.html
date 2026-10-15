@@ -1,0 +1,21 @@
+<div class="cart-section">
+    <h2>Your cart:</h2>
+
+    @if(cart.length > 0){
+        <app-product-list [products]="cart"/>
+
+        <div class="cart-total-price">
+            <span>
+                The total price of your cart is:
+                {{ cart.reduce(
+                    (price, product) => price + product.price * product.quantity,
+                    0 
+                )}}
+                €
+            </span>
+            <button class="custom-button" (click)="orderBooksInCart()">Order now</button>
+        </div>
+    } @else {
+        <span class="cart-is-empty">Your cart is currently empty, you should take a look at the <a routerLink="/shop">shop</a>!</span>
+    }
+</div>

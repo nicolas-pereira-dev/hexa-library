@@ -1,0 +1,24 @@
+<div class="header-barre">
+    <h1 class="title">
+        Welcome to The Library
+        @if(isAuthenticated()){
+            <span class="user-firstname">
+                {{ userSignal!().firstName | titlecase }}
+            </span>
+        }
+        !
+    </h1>
+    <nav class="navbar">
+        <a class="nav-link" routerLink="/shop">Shop</a>
+        <a class="nav-link" routerLink="/contact">Contact</a>
+        <a class="nav-link" routerLink="/cart">Cart</a>
+        @if(cartInventory() > 0){
+            <span class="cart-number-of-product">{{ cartInventory() }}</span>
+        }
+        @if(isAuthenticated()){
+            <a class="nav-link" routerLink="/profile">Profile</a>
+        } @else {
+            <a class="nav-link" routerLink="/login">Login</a>
+        }
+    </nav>
+</div>

@@ -1,0 +1,16 @@
+<div class="product-card">
+    <img [src]="imageURL" alt="{{ product.name }}" />
+    <div class="product-card-details">
+        <span style="font-weight: bold;">{{ product.name }}</span>
+        <span style="font-style: italic;">{{ product.description }}</span>
+        <span style="font-style: italic;">{{ product.quantity }} in stock</span>
+        <span style="font-weight: bold;">{{ product.price }} €</span>
+    </div>
+    <div class="product-card-actions-section">
+        <span>Add to the cart</span>
+        <div class="product-card-actions">
+            <button (click)="removeFromCart(product.id)">-</button>
+            <button (click)="addToCart(product.id)">+</button>
+        </div>
+    </div>
+</div>

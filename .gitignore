@@ -1,0 +1,75 @@
+# ==============================
+# OS files
+# ==============================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ==============================
+# Editors / IDEs
+# ==============================
+.vscode/
+.idea/
+*.iml
+*.iws
+*.ipr
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+.factorypath
+.apt_generated
+.springBeans
+.sts4-cache
+
+# ==============================
+# Java / Maven
+# ==============================
+target/
+build/
+*.class
+*.jar
+*.war
+*.ear
+*.log
+
+# ==============================
+# Node / Angular
+# ==============================
+node_modules/
+dist/
+out-tsc/
+bazel-out/
+.angular/cache/
+.sass-cache/
+coverage/
+libpeerconnection.log
+npm-debug.log*
+yarn-error.log*
+*.tsbuildinfo
+
+# ==============================
+# Secrets / local config
+# ==============================
+.env
+.env.*
+*.env
+application-local.yaml
+application-local.yml
+application-local.properties
+*.pem
+*.key
+
+# ==============================
+# Runtime data
+# ==============================
+logs/
+*.pid
+*.seed

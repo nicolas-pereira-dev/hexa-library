@@ -1,0 +1,23 @@
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.search-bar {
+    width: 300px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: 0.5s ease;
+}
+
+.search-bar:hover, .search-bar:focus {
+    width: 400px;
+}
+
+.search-button {
+    padding: 8px 16px;
+    margin-left: 8px;
+}

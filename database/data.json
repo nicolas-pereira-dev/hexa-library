@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "name": "Clean Code",
+        "price": 10.99,
+        "description": "By Robert C. Martin",
+        "URI": "./clean_code.jpg",
+        "quantity": 100
+    },
+    {
+        "id": 2,
+        "name": "Design Patterns",
+        "price": 15.99,
+        "description": "By Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides",
+        "URI": "./design_patterns.jpg",
+        "quantity": 30
+    },
+    {
+        "id": 3,
+        "name": "Refactoring",
+        "price": 12.99,
+        "description": "By Martin Fowler",
+        "URI": "./refactoring.jpg",
+        "quantity": 50
+    },
+    {
+        "id": 4,
+        "name": "The Pragmatic Programmer",
+        "price": 14.99,
+        "description": "By Andrew Hunt and David Thomas",
+        "URI": "./the_pragmatic_programmer.jpg",
+        "quantity": 20
+    },
+    {
+        "id": 5,
+        "name": "Alice in wonderland",
+        "price": 8.99,
+        "description": "By Lewis Carroll",
+        "URI": "./alice_in_wonderland.png",
+        "quantity": 10
+    },
+    {
+        "id": 6,
+        "name": "The Cat in the Hat",
+        "price": 7.99,
+        "description": "By Dr. Seuss",
+        "URI": "./the_cat_in_the_hat.png",
+        "quantity": 25
+    },
+    {
+        "id": 7,
+        "name": "The Universe in a Nutshell",
+        "price": 9.99,
+        "description": "By Stephen Hawking",
+        "URI": "./the_universe_in_a_nutshell.jpg",
+        "quantity": 15
+    },
+    {
+        "id": 8,
+        "name": "The Odyssey",
+        "price": 11.99,
+        "description": "By Homer",
+        "URI": "./the_odyssey.jpg",
+        "quantity": 40
+    }
+]
