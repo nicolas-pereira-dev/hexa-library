@@ -89,7 +89,7 @@ export class ProductService {
         const order:Order = {
             userId: user.id,
             books: this.cart,
-            timestamp: Date.now().toString()
+            timestamp: Date.now().toString(),
         };
 
         return from(

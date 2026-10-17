@@ -1,3 +1,4 @@
+import { OrderStatusEnum } from "./orderStatusEnum";
 import { Product } from "./product";
 
 export interface Order {
@@ -5,4 +6,5 @@ export interface Order {
     userId: number;
     books:Array<Product>;
     timestamp: string;
+    orderStatus?: OrderStatusEnum;
 }

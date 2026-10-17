@@ -3,6 +3,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { AuthenticationService } from '../../services/authentication/authentication-service';
 import { User } from '../../models/user';
 import { Router } from '@angular/router';
+import { RoleEnum } from '../../models/RoleEnum';
 
 @Component({
   selector: 'app-login-page',
@@ -29,7 +30,7 @@ export class LoginPage implements OnInit {
     if (this.formGroup.valid) {
       const username = this.formGroup.get('username')?.value ?? '';
       const password = this.formGroup.get('password')?.value ?? '';
-      const user = new User(0, username, password, '', '', '', '');
+      const user = new User(0, username, password);
       
       this.handleAuthentication(user);
     } else {

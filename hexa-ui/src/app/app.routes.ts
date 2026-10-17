@@ -3,6 +3,7 @@ import { ShopPage } from './features/shop-page/shop-page';
 import { UserCart } from './features/user-cart/user-cart';
 import { LoginPage } from './features/login-page/login-page';
 import { ProfilePage } from './features/profile-page/profile-page';
+import { authGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
     {
@@ -23,7 +24,8 @@ export const routes: Routes = [
     },
     {
         path: 'profile',
-        component: ProfilePage
+        component: ProfilePage,
+        canActivate: [authGuard]
     },
     {
         path: 'login',

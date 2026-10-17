@@ -1,1 +1,5 @@
-<h2>User profile</h2>
+<div class="user-profile">
+    <h2>User profile</h2>
+    <p>User role: {{ userSignal().role }}</p>
+    <button (click)="logout()">Logout</button>
+</div>

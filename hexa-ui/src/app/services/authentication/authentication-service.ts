@@ -1,12 +1,14 @@
-import { Service, signal } from "@angular/core";
+import { inject, Service, signal } from "@angular/core";
 import { User } from "../../models/user";
 import { from, Observable } from "rxjs";
+import { Router } from "@angular/router";
 
 @Service()
 export class AuthenticationService {
     path: string = 'http://localhost:8080/users';
     userSignal = signal(new User());
     isAuthenticated = signal(false);
+    router = inject(Router);
 
     login(user: User): Observable<User> {
         return from(
@@ -49,5 +51,6 @@ export class AuthenticationService {
     logOut() {
         this.userSignal.set(new User());
         this.isAuthenticated.set(false);
+        this.router.navigate(['/shop']);
     }
 }
