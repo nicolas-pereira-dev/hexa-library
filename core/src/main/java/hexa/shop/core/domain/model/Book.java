@@ -10,4 +10,5 @@ public class Book {
     private Double price;
     private Integer quantity;
     private String imagePath;
+    private User seller;
 }

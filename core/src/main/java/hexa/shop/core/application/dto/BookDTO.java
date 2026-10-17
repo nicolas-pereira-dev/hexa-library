@@ -10,4 +10,5 @@ public class BookDTO {
     private Double price;
     private Integer quantity;
     private String URI;
+    private Long sellerId;
 }

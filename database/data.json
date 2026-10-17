@@ -5,7 +5,8 @@
         "price": 10.99,
         "description": "By Robert C. Martin",
         "URI": "./clean_code.jpg",
-        "quantity": 100
+        "quantity": 100,
+        "sellerId": 2
     },
     {
         "id": 2,
@@ -13,7 +14,8 @@
         "price": 15.99,
         "description": "By Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides",
         "URI": "./design_patterns.jpg",
-        "quantity": 30
+        "quantity": 30,
+        "sellerId": 2
     },
     {
         "id": 3,
@@ -21,7 +23,8 @@
         "price": 12.99,
         "description": "By Martin Fowler",
         "URI": "./refactoring.jpg",
-        "quantity": 50
+        "quantity": 50,
+        "sellerId": 2
     },
     {
         "id": 4,
@@ -29,7 +32,8 @@
         "price": 14.99,
         "description": "By Andrew Hunt and David Thomas",
         "URI": "./the_pragmatic_programmer.jpg",
-        "quantity": 20
+        "quantity": 20,
+        "sellerId": 2
     },
     {
         "id": 5,
@@ -37,7 +41,8 @@
         "price": 8.99,
         "description": "By Lewis Carroll",
         "URI": "./alice_in_wonderland.png",
-        "quantity": 10
+        "quantity": 10,
+        "sellerId": 2
     },
     {
         "id": 6,
@@ -45,7 +50,8 @@
         "price": 7.99,
         "description": "By Dr. Seuss",
         "URI": "./the_cat_in_the_hat.png",
-        "quantity": 25
+        "quantity": 25,
+        "sellerId": 2
     },
     {
         "id": 7,
@@ -53,7 +59,8 @@
         "price": 9.99,
         "description": "By Stephen Hawking",
         "URI": "./the_universe_in_a_nutshell.jpg",
-        "quantity": 15
+        "quantity": 15,
+        "sellerId": 2
     },
     {
         "id": 8,
@@ -61,6 +68,7 @@
         "price": 11.99,
         "description": "By Homer",
         "URI": "./the_odyssey.jpg",
-        "quantity": 40
+        "quantity": 40,
+        "sellerId": 2
     }
 ]

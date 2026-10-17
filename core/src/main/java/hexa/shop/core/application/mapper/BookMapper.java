@@ -4,10 +4,17 @@ import org.springframework.stereotype.Component;
 
 import hexa.shop.core.application.dto.BookDTO;
 import hexa.shop.core.domain.model.Book;
+import hexa.shop.core.domain.service.UserService;
 import hexa.shop.core.infrastructure.persistence.jpa.BookEntity;
+import lombok.AllArgsConstructor;
 
 @Component
+@AllArgsConstructor
 public class BookMapper {
+
+    private final UserMapper userMapper;
+    private final UserService userService;
+
     public Book toDomain(BookEntity bookEntity) {
         if (bookEntity == null) {
             return null;
@@ -19,6 +26,7 @@ public class BookMapper {
         book.setPrice(bookEntity.getPrice());
         book.setQuantity(bookEntity.getQuantity());
         book.setImagePath(bookEntity.getURI());
+        book.setSeller(userMapper.toDomain(bookEntity.getSeller()));
         return book;
     }
 
@@ -33,6 +41,7 @@ public class BookMapper {
         book.setPrice(dto.getPrice());
         book.setQuantity(dto.getQuantity());
         book.setImagePath(dto.getURI());
+        book.setSeller(userService.findById(dto.getSellerId()));
         return book;
     }
 
@@ -47,6 +56,7 @@ public class BookMapper {
         bookEntity.setPrice(book.getPrice());
         bookEntity.setQuantity(book.getQuantity());
         bookEntity.setURI(book.getImagePath());
+        bookEntity.setSeller(userMapper.toEntity(book.getSeller()));
         return bookEntity;
     }
 
@@ -61,6 +71,7 @@ public class BookMapper {
         dto.setPrice(book.getPrice());
         dto.setQuantity(book.getQuantity());
         dto.setURI(book.getImagePath());
+        dto.setSellerId(book.getSeller().getId());
         return dto;
     }
 }
