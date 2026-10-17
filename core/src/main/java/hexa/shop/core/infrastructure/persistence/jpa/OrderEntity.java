@@ -2,8 +2,7 @@ package hexa.shop.core.infrastructure.persistence.jpa;
 
 import java.util.List;
 
-import hexa.shop.core.domain.model.Book;
-import hexa.shop.core.domain.model.User;
+import hexa.shop.core.domain.model.OrderStatusEnum;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -29,4 +28,6 @@ public class OrderEntity {
     private List<BookEntity> books;
     @Column()
     private String timestamp;
+    @Column()
+    private OrderStatusEnum orderStatus;
 }

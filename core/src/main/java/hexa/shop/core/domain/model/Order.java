@@ -10,4 +10,5 @@ public class Order {
     private User user;
     private List<Book> books;
     private String timestamp;
+    private OrderStatusEnum orderStatus;
 }

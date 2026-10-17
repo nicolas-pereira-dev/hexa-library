@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 
 import hexa.shop.core.application.mapper.OrderMapper;
 import hexa.shop.core.domain.model.Order;
+import hexa.shop.core.domain.model.OrderStatusEnum;
 import hexa.shop.core.domain.port.repository.OrderRepositoryPort;
 import hexa.shop.core.infrastructure.kafka.event.OrderEvent;
 import hexa.shop.core.infrastructure.kafka.producer.OrderEventProducer;
@@ -19,6 +20,7 @@ public class OrderService {
     public Order orderBooks(Order order) {
         Order result = orderRepository.orderBooks(order);
         if(result != null){
+            result.setOrderStatus(OrderStatusEnum.RECEIVED);
             OrderEvent event = orderMapper.toEvent(result);
             this.orderEventProducer.publishOrderEvent(event);
         }
